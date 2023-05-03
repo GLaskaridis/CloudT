@@ -9,7 +9,7 @@ public class DataSourceConfig {
     public DataSource getDataSource(){
         return DataSourceBuilder.create()
         .driverClassName("com.mysql.cj.jdbc.Driver")
-        .url("jdbc:mysql://localhost:3306/dvddb")
+        .url(System.getenv("SPRING_DB_URL"))
         .username("Giorgos")
         .password("1234")
         .build();
